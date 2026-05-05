@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_LEVEL=INFO
+      - IPINFO_TOKEN=${IPINFO_TOKEN}
+    volumes:
+      - ./backend/app/logs:/app/app/logs
