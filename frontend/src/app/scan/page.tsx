@@ -14,7 +14,7 @@ import { GeoMap } from "../../components/GeoMap";
 import { ActionBar } from "../../components/ActionBar";
 
 
-import { postFullScan, postProbe, postTraceroute } from "../../lib/api";
+import { postFullScan, postProbe, postTraceroute } from "@/lib/api";
 import type { ScanPayload, ScanResponse } from "../../lib/types";
 
 const initialResponse: ScanResponse = {
