@@ -2,12 +2,16 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { ScanForm } from "@/components/ScanForm";
-import { StatusPanel } from "@/components/StatusPanel";
-import { ResultCharts } from "@/components/ResultCharts";
-import { HopTable } from "@/components/HopTable";
-import { GeoMap } from "@/components/GeoMap";
-import { ActionBar } from "@/components/ActionBar";
+
+import ScanForm from "../../components/ScanForm";
+
+
+
+import { StatusPanel } from "../../components/StatusPanel";
+import { ResultCharts } from "../../components/ResultCharts";
+import { HopTable } from "../../components/HopTable";
+import { GeoMap } from "../../components/GeoMap";
+import { ActionBar } from "../../components/ActionBar";
 import { postFullScan, postProbe, postTraceroute } from "@/lib/api";
 import type { ScanPayload, ScanResponse } from "@/lib/types";
 
