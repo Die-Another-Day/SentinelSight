@@ -7,7 +7,7 @@ import HopTable from "../../components/HopTable";
 import GeoMap from "../../components/GeoMap";
 import ActionBar from "../../components/ActionBar";
 
-import type { ScanResponse } from "@/lib/types";
+import { someFunction } from "../../lib/api";
 
 const emptyResult: ScanResponse = {
   target: "",
