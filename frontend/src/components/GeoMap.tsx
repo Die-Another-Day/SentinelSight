@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
-import type { HopInfo } from "../../lib/types";
+import type { HopResult } from "../lib/type";
+
 
 const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
 const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
@@ -10,10 +11,11 @@ const CircleMarker = dynamic(() => import("react-leaflet").then((mod) => mod.Cir
 const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), { ssr: false });
 
 interface GeoMapProps {
-  data: HopInfo[];
+  data: HopResult[];
 }
 
-const defaultCenter = [20, 0] as const;
+
+const defaultCenter: [number, number] = [20, 0];
 
 export function GeoMap({ data }: GeoMapProps) {
   const [mounted, setMounted] = useState(false);

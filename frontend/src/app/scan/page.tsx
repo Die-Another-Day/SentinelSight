@@ -3,7 +3,9 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
-import ScanForm from "../../components/ScanForm";
+import { ScanForm } from "../../components/ScanForm";
+
+
 
 
 
@@ -15,7 +17,8 @@ import { ActionBar } from "../../components/ActionBar";
 
 
 import { postFullScan, postProbe, postTraceroute } from "../../lib/api";
-import type { ScanPayload, ScanResponse } from "../../lib/types";
+import type { ScanPayload, ScanResponse } from "../../lib/type";
+
 
 const initialResponse: ScanResponse = {
   target: "",

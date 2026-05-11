@@ -2,14 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import ResultCharts from "../../components/ResultCharts";
-import HopTable from "../../components/HopTable";
-import GeoMap from "../../components/GeoMap";
-import ActionBar from "../../components/ActionBar";
 
-import { someFunction } from "../../lib/api";
+import type { ScanResponse } from "../../lib/type";
+
+import { ResultCharts } from "../../components/ResultCharts";
+import { HopTable } from "../../components/HopTable";
+import { GeoMap } from "../../components/GeoMap";
+import { ActionBar } from "../../components/ActionBar";
+
 
 const emptyResult: ScanResponse = {
+
   target: "",
   probe_results: [],
   traceroute_results: [],

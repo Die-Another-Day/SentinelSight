@@ -1,8 +1,13 @@
+export type ScanType = "probe" | "traceroute" | "full-scan";
+
 export interface ScanPayload {
   target: string;
-  probes?: number;
-  scanType: "probe" | "traceroute" | "full";
+  count: number;
+  scanType: ScanType;
 }
+
+
+
 
 export interface ProbeResult {
   seq: number;
@@ -13,10 +18,14 @@ export interface ProbeResult {
 export interface HopResult {
   hop: number;
   ip: string;
+  ttl?: number;
   rtt_ms?: number;
   hostname?: string;
+  source?: string;
+  location?: string;
   country?: string;
   city?: string;
+  status?: string;
 }
 
 export interface ScanResponse {

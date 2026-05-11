@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import type { ScanPayload } from "../../lib/types";
+import type { ScanPayload } from "../lib/type";
+
 
 const scanOptions = [
   { value: "probe", label: "Probe" },
@@ -19,10 +20,12 @@ export function ScanForm({ onSubmit, disabled = false }: ScanFormProps) {
   const [count, setCount] = useState(3);
   const [scanType, setScanType] = useState<ScanPayload["scanType"]>("full-scan");
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     onSubmit({ target: target.trim(), count, scanType });
   };
+
+
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-[1.5fr_1fr] lg:grid-cols-[1.3fr_0.8fr]">

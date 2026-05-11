@@ -1,8 +1,9 @@
-import type { HopInfo } from "../../lib/types";
+import type { HopResult } from "../lib/type";
 
 interface HopTableProps {
-  data: HopInfo[];
+  data: HopResult[];
 }
+
 
 export function HopTable({ data }: HopTableProps) {
   return (

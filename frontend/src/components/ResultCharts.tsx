@@ -1,11 +1,13 @@
 "use client";
 
 import { Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import type { HopInfo } from "../..//lib/types";
+import type { HopResult } from "../lib/type";
+
 
 interface ResultChartsProps {
-  tracerouteData: HopInfo[];
+  tracerouteData: HopResult[];
 }
+
 
 export function ResultCharts({ tracerouteData }: ResultChartsProps) {
   const chartData = tracerouteData.map((hop) => ({
