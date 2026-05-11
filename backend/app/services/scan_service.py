@@ -97,7 +97,7 @@ class ScanService:
     # DEMO FALLBACK RESPONSES
     # =========================
 
-    def _demo_probe_response(self, target: str, count: int) -> ScanResponse:
+def _demo_probe_response(self, target: str, count: int) -> ScanResponse:
     results = [
         ProbeResult(
             sequence=i + 1,
@@ -125,7 +125,8 @@ class ScanService:
         }
     )
 
-    def _demo_traceroute_response(self, target: str, max_ttl: int) -> ScanResponse:
+
+def _demo_traceroute_response(self, target: str, max_ttl: int) -> ScanResponse:
     hops = [
         HopInfo(
             ttl=1,
@@ -188,6 +189,8 @@ class ScanService:
             "message": "Cloud-hosted demo mode enabled"
         }
     )
+
+    
 
     def _demo_full_scan_response(self, target: str, count: int, max_ttl: int) -> ScanResponse:
         probe_response = self._demo_probe_response(target, count)
