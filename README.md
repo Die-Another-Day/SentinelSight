@@ -1,52 +1,88 @@
-# SentinelSight Network Intelligence Platform
+# SentinelSight
 
-SentinelSight is the production-grade evolution of NetTracePro. It transforms the original ICMP probe and traceroute script into a modular, cloud-ready security intelligence platform with a backend API, deployment pipeline, and research-grade architecture.
+> Cloud-ready network intelligence and traceroute visualization platform built with FastAPI, Next.js, and Docker.
 
-## Project Structure
+![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/backend-FastAPI-blue)
+![Next.js](https://img.shields.io/badge/frontend-Next.js-black)
+![Deployment](https://img.shields.io/badge/deployment-Render%20%2B%20Vercel-success)
 
-- `backend/` — FastAPI backend service for ICMP probes, traceroute, and full-scan orchestration
-- `frontend/` — React/Next.js web UI scaffold for browser-based interaction
-- `docker/` — Docker containerization and compose orchestration
-- `tests/` — Unit and API tests for backend validation
-- `.github/workflows/ci.yml` — GitHub Actions CI pipeline
+---
 
-## What it does
+## Overview
 
-- Provides structured JSON endpoints for ICMP probe, traceroute, and combined network scan
-- Uses backend host privileges for ICMP while keeping the browser layer safe
-- Enriches hop metadata with geolocation and ASN intelligence
-- Exposes a deployable API for dashboards, SIEM integration, and network monitoring
+SentinelSight is a full-stack network intelligence platform designed for:
 
-## Quick Start
+- ICMP probing
+- Traceroute analysis
+- RTT latency visualization
+- Hop-by-hop route mapping
+- Geolocation enrichment
+- Interactive web-based monitoring dashboard
 
-1. Install backend dependencies:
+The platform combines a FastAPI backend with a modern Next.js frontend and supports cloud deployment using Render and Vercel.
+
+---
+
+## Live Deployment
+
+### Frontend
+https://net-trace-pro.vercel.app
+
+### Backend API Docs
+https://nettracepro.onrender.com/docs
+
+---
+
+# Features
+
+## Backend
+- FastAPI REST API
+- ICMP probing
+- Traceroute scanning
+- Async scan execution
+- Geolocation enrichment
+- Structured logging
+- Modular architecture
+
+## Frontend
+- Hacker-style responsive UI
+- Real-time scan dashboard
+- RTT latency charts
+- Hop visualization
+- Interactive geolocation map
+- Export scan results as JSON
+- Session persistence
+
+## DevOps
+- Docker support
+- Render deployment
+- Vercel deployment
+- GitHub Actions CI-ready
+
+---
+
+# Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | Next.js, TypeScript, TailwindCSS |
+| Backend | FastAPI, Python |
+| Networking | Scapy |
+| Charts | Recharts |
+| Maps | Leaflet |
+| Deployment | Render, Vercel |
+| Containerization | Docker |
+
+---
+
+# Project Structure
 
 ```bash
-cd backend
-pip install -r requirements.txt
-```
-
-2. Run backend locally:
-
-```bash
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-```
-
-3. Open Swagger UI:
-
-- `http://localhost:8000/docs`
-
-## Deployment
-
-- `docker/Dockerfile` for containerized backend
-- `docker/docker-compose.yml` for local service orchestration
-- Readme content below includes deployment paths for Render/Railway and Vercel
-
-## Next Steps
-
-- Build and deploy frontend in `frontend/`
-- Add API key authorization and rate limiting
-- Add persistent storage for historical route tracking
-- Add dashboard analytics and anomaly detection
-- Use this platform for network intelligence research and SIEM integration
-
+NetTracePro/
+├── backend/
+├── frontend/
+├── docker/
+├── tests/
+├── README.md
+└── LICENSE
