@@ -27,7 +27,7 @@ The platform combines a FastAPI backend with a modern Next.js frontend and suppo
 ## Live Deployment
 
 ### Frontend
-https://net-trace-pro.vercel.app
+https://sentineltrace.vercel.app
 
 ### Backend API Docs
 https://nettracepro.onrender.com/docs
